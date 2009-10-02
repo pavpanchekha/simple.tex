@@ -7,13 +7,29 @@
 \nofiles
 
 \makeatletter
+\newcommand{\draft}[1]{\def\@draft{#1}}
 \renewcommand{\@maketitle}{
     \let \footer \thanks
     \newpage
     \null
     \vskip -.5em%
-    {\Large \@title \par}%
-    {\large \@author\ \if\@author(\@date)\else\@date\fi\par}%
+    {\bf \Large \@title\ \ifx \@draft \undefined \relax\else
+    (Draft \@draft)
+    \fi\par}%
+    {\bf \large \ifx \@author \undefined%
+        \ifx \@date \undefined%
+            \relax%
+        \else%
+            \@date\par%
+        \fi%
+    \else%
+        \@author%
+        \ifx \@date \undefined%
+            \par%
+        \else%
+            \ (\@date)\par%
+        \fi%
+    \fi}%
     \vskip .5em%
 } \makeatother
 
@@ -22,10 +38,19 @@
 \usepackage[T2A]{fontenc}
 \usepackage{multicol}
 
+\usepackage{amsmath,amssymb}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0em}
 \setcounter{secnumdepth}{-1}
 
-\setlength{\textheight}{9in}
+\setlength{\textheight}{9.5in}
 
 \date{}
+
+\providecommand{\st}{\ensuremath{^\text{st}}}
+\providecommand{\nd}{\ensuremath{^\text{nd}}}
+\providecommand{\rd}{\ensuremath{^\text{rd}}}
+\providecommand{\th}{\ensuremath{^\text{th}}}
