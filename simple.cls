@@ -24,7 +24,7 @@
         \fi%
     \else%
         \@author%
-        \ifx \@date \undefined%
+        \if \@date %
             \par%
         \else%
             \ (\@date)\par%
@@ -42,7 +42,7 @@
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
 
-\setlength{\parskip}{1em}
+\setlength{\parskip}{1em plus .66em minus .33em}
 \setlength{\parindent}{0em}
 \setcounter{secnumdepth}{-1}
 
