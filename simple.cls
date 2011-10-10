@@ -4,15 +4,13 @@
 \PassOptionsToClass{11pt,12pt}{article}
 \LoadClass[12pt]{article}
 
-\nofiles
-
 \makeatletter
 \newcommand{\draft}[1]{\def\@draft{#1}}
 \renewcommand{\@maketitle}{
     \let \footer \thanks
     \newpage
     \null
-    \vskip -.5em%
+    \vskip -5em%
     {\bf \Large \@title\ \ifx \@draft \undefined \relax\else
     (Draft \@draft)
     \fi\par}%
@@ -35,18 +33,19 @@
 
 \usepackage{fullpage}
 \usepackage[utf8]{inputenc}
-\usepackage[T2A]{fontenc}
+\usepackage[T1]{fontenc}
 \usepackage{multicol}
 
 \usepackage{amsmath,amssymb}
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
 
-\setlength{\parskip}{1em plus .66em minus .33em}
+\setlength{\parskip}{1em plus .75em minus .45em}
 \setlength{\parindent}{0em}
 \setcounter{secnumdepth}{-1}
 
-\setlength{\textheight}{9.5in}
+\setlength{\topmargin}{0pt}
+\setlength{\textheight}{9in}
 
 \date{}
 
@@ -54,3 +53,12 @@
 \providecommand{\nd}{\ensuremath{^\text{nd}}}
 \providecommand{\rd}{\ensuremath{^\text{rd}}}
 \providecommand{\th}{\ensuremath{^\text{th}}}
+
+\providecommand{\RR}{\ensuremath{\mathbb{R}}}
+\providecommand{\QQ}{\ensuremath{\mathbb{Q}}}
+\providecommand{\CC}{\ensuremath{\mathbb{C}}}
+\providecommand{\ZZ}{\ensuremath{\mathbb{Z}}}
+\providecommand{\NN}{\ensuremath{\mathbb{N}}}
+\providecommand{\FF}{\ensuremath{\mathbb{F}}}
+
+\renewcommand{\thefigure}{\arabic{figure}}
