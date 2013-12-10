@@ -31,9 +31,8 @@
     \vskip .5em%
 } \makeatother
 
-\usepackage{fullpage}
+\usepackage[margin=1in]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
 \usepackage{multicol}
 
 \usepackage{amsmath,amssymb}
@@ -44,15 +43,7 @@
 \setlength{\parindent}{0em}
 \setcounter{secnumdepth}{-1}
 
-\setlength{\topmargin}{0pt}
-\setlength{\textheight}{9in}
-
 \date{}
-
-\providecommand{\st}{\ensuremath{^\text{st}}}
-\providecommand{\nd}{\ensuremath{^\text{nd}}}
-\providecommand{\rd}{\ensuremath{^\text{rd}}}
-\providecommand{\th}{\ensuremath{^\text{th}}}
 
 \providecommand{\RR}{\ensuremath{\mathbb{R}}}
 \providecommand{\QQ}{\ensuremath{\mathbb{Q}}}
