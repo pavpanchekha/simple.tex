@@ -1,0 +1,21 @@
+<!-- -*- mode: markdown -*- -->
+
+Simple TeX Styles
+=================
+
+This is a collection of simple TeX styles. Right now it contains
+three:
+
+ + `simple.cls` is a very minimal page style for drafts and informal
+   writings. It adds the `\draft{n}` command for numbering version of
+   the document.
+ + `pset.cls` is a page style for problem sets. It adds the
+   `\class{name}` and `\collaborators{names}` commands to list the
+   class name and collaborators on a problem set. It also defines the
+   `\todo` command to mark not-yet-completed sections and `\ans` to
+   box answers. For plots it provides `\coordsys`, `\smallcoordsys`,
+   and `\plotfq`, the first two of which make a large and small set of
+   zero-centered axes, and the last of which provides axes for the
+   first quadrant.
+ + `w755-essay.sty` sets up a very specific page and title layout, as
+   required by a writing class I once took.
